@@ -10,26 +10,26 @@ The project utilises two external APIs;
 - Chuck Norris random fact generator API
 - Sentiment Analysis API  
   
-Operationally, a service object connects to the Chuck Norris API and receives a random fact. This random fact fact is then passed to a sentiment analysis API, which grades the sentiment of the random fact be be either;
+Operationally, a service object connects to the Chuck Norris API and receives a random fact. This random fact is then passed to a sentiment analysis API, which grades the sentiment of the random fact be be either;
   
 - positive  
 - negative  
 - neutral  
   
-[Surprisingly a lot of Chuck Norris facts have a negative sentiment.]
+[Surprisingly a lot of Chuck Norris facts have a negative sentiment. Who'd a thunk it?]
 
 ## Technical
 The project is implemented as a Spring Boot application. 
 
 It uses _lombok_ for domain object implementation.
 
-The _circuit breaker_ design pattern is implemented using the _Spring Cloud Netflix Hystrix_ library on the **ChuckService** service. This enables the project to follow the *build to fail* paradigm.
+The _circuit breaker_ design pattern is implemented using the _Spring Cloud Netflix Hystrix_ library on the **ChuckService** service. (This enables the project to follow the *build to fail* paradigm.)
 
 ## Build
 
-The project uses Gradle as its build tool.
+The project uses Gradle.
 
-To build use the following command.
+To build the project use the following command.
 
 ```
 gradle assemble
